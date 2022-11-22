@@ -23,6 +23,8 @@
 		88546F612926355E0088936F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88546F5F2926355E0088936F /* LaunchScreen.storyboard */; };
 		88B7D3FA292783F800119488 /* ImageProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B7D3F9292783F800119488 /* ImageProperties.swift */; };
 		88B7D3FC292794BF00119488 /* DataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B7D3FB292794BF00119488 /* DataProvider.swift */; };
+		88FF6AB4292B9767004990E7 /* AlamofireNetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FF6AB3292B9767004990E7 /* AlamofireNetworkRequest.swift */; };
+		88FF6AB7292B9796004990E7 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 88FF6AB6292B9796004990E7 /* Alamofire */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +46,7 @@
 		88546F622926355E0088936F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		88B7D3F9292783F800119488 /* ImageProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageProperties.swift; sourceTree = "<group>"; };
 		88B7D3FB292794BF00119488 /* DataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataProvider.swift; sourceTree = "<group>"; };
+		88FF6AB3292B9767004990E7 /* AlamofireNetworkRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireNetworkRequest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +54,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				88FF6AB7292B9796004990E7 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -125,6 +129,7 @@
 			children = (
 				881CC533292683B2009A184A /* NetworkManager.swift */,
 				88B7D3FB292794BF00119488 /* DataProvider.swift */,
+				88FF6AB3292B9767004990E7 /* AlamofireNetworkRequest.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -145,6 +150,9 @@
 			dependencies = (
 			);
 			name = Networking3;
+			packageProductDependencies = (
+				88FF6AB6292B9796004990E7 /* Alamofire */,
+			);
 			productName = Networking3;
 			productReference = 88546F512926355E0088936F /* Networking3.app */;
 			productType = "com.apple.product-type.application";
@@ -173,6 +181,9 @@
 				Base,
 			);
 			mainGroup = 88546F482926355D0088936F;
+			packageReferences = (
+				88FF6AB5292B9796004990E7 /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = 88546F522926355E0088936F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -207,6 +218,7 @@
 				881CC52629265FE8009A184A /* WebViewController.swift in Sources */,
 				88546F552926355E0088936F /* AppDelegate.swift in Sources */,
 				881CC52229264313009A184A /* ImageViewController.swift in Sources */,
+				88FF6AB4292B9767004990E7 /* AlamofireNetworkRequest.swift in Sources */,
 				88546F572926355E0088936F /* SceneDelegate.swift in Sources */,
 				88B7D3FA292783F800119488 /* ImageProperties.swift in Sources */,
 				881CC52429265F01009A184A /* CoursesViewController.swift in Sources */,
@@ -430,6 +442,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		88FF6AB5292B9796004990E7 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.6.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		88FF6AB6292B9796004990E7 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 88FF6AB5292B9796004990E7 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 88546F492926355D0088936F /* Project object */;
 }

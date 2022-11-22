@@ -23,22 +23,39 @@
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="lcV-W3-b6x">
                                 <rect key="frame" x="186.66666666666666" y="416" width="20" height="20"/>
                             </activityIndicatorView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Completed" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hnA-Wg-xzX">
+                                <rect key="frame" x="135.33333333333334" y="528" width="122.66666666666666" height="30"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="ihx-KK-uxa">
+                                <rect key="frame" x="20" y="604" width="353" height="4"/>
+                            </progressView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="t5C-nD-4eN"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="ihx-KK-uxa" firstAttribute="leading" secondItem="t5C-nD-4eN" secondAttribute="leading" constant="20" id="7KB-S2-zyE"/>
+                            <constraint firstItem="hnA-Wg-xzX" firstAttribute="centerX" secondItem="BkU-ih-hFv" secondAttribute="centerX" id="Ezq-D3-ICO"/>
                             <constraint firstItem="aGw-ZU-uRv" firstAttribute="leading" secondItem="t5C-nD-4eN" secondAttribute="leading" id="bIL-KX-oOU"/>
+                            <constraint firstItem="t5C-nD-4eN" firstAttribute="trailing" secondItem="ihx-KK-uxa" secondAttribute="trailing" constant="20" id="ds8-jQ-nvC"/>
                             <constraint firstItem="lcV-W3-b6x" firstAttribute="centerX" secondItem="BkU-ih-hFv" secondAttribute="centerX" id="eyy-tB-cqS"/>
                             <constraint firstItem="aGw-ZU-uRv" firstAttribute="top" secondItem="t5C-nD-4eN" secondAttribute="top" id="hmx-Ox-e03"/>
+                            <constraint firstItem="ihx-KK-uxa" firstAttribute="centerX" secondItem="BkU-ih-hFv" secondAttribute="centerX" id="lpa-3i-fKT"/>
                             <constraint firstItem="lcV-W3-b6x" firstAttribute="centerY" secondItem="BkU-ih-hFv" secondAttribute="centerY" id="rPH-qX-bGQ"/>
                             <constraint firstItem="aGw-ZU-uRv" firstAttribute="bottom" secondItem="t5C-nD-4eN" secondAttribute="bottom" constant="34" id="xLH-zk-EhY"/>
+                            <constraint firstItem="hnA-Wg-xzX" firstAttribute="top" secondItem="lcV-W3-b6x" secondAttribute="bottom" constant="92" id="y0m-dd-nHu"/>
+                            <constraint firstItem="ihx-KK-uxa" firstAttribute="top" secondItem="hnA-Wg-xzX" secondAttribute="bottom" constant="46" id="y5d-BI-b6g"/>
                             <constraint firstItem="t5C-nD-4eN" firstAttribute="trailing" secondItem="aGw-ZU-uRv" secondAttribute="trailing" id="zZ1-eU-4Ae"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="VBL-NO-jo1"/>
                     <connections>
                         <outlet property="activityIndicator" destination="lcV-W3-b6x" id="W20-oe-fFH"/>
+                        <outlet property="completedLabel" destination="hnA-Wg-xzX" id="RFa-mB-PHq"/>
                         <outlet property="imageView" destination="aGw-ZU-uRv" id="RBj-fS-ErO"/>
+                        <outlet property="progressView" destination="ihx-KK-uxa" id="4Ct-ct-Rdp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hpr-MD-OaK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -228,6 +245,11 @@
                     <connections>
                         <segue destination="JdK-M8-AJW" kind="show" identifier="ShowImage" id="b6E-MY-F0b"/>
                         <segue destination="WRd-BF-ZPH" kind="show" identifier="OurCourses" id="kkx-9y-M9r"/>
+                        <segue destination="WRd-BF-ZPH" kind="show" identifier="OurCoursesWithAlamofire" id="d6n-3p-RgF"/>
+                        <segue destination="JdK-M8-AJW" kind="show" identifier="ResponseData" id="8Zg-bB-3cU"/>
+                        <segue destination="JdK-M8-AJW" kind="show" identifier="LargeImage" id="X7k-wc-uXq"/>
+                        <segue destination="WRd-BF-ZPH" kind="show" identifier="PostRequest" id="qRn-nm-0xo"/>
+                        <segue destination="WRd-BF-ZPH" kind="show" identifier="PutRequest" id="aKu-ie-ipw"/>
                     </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="o6s-ZI-bAa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -253,6 +275,10 @@
             <point key="canvasLocation" x="1031" y="446"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="aKu-ie-ipw"/>
+        <segue reference="X7k-wc-uXq"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
